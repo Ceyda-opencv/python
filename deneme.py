@@ -43,5 +43,12 @@ cv2.drawContours(rgb, cnt, -1, (0, 255, 0), 2)
 
 cv2.imshow("Image", image)
 cv2.waitKey(0)
+Traceback (most recent call last):
+line 32, in <module>
+    cnts = contours.sort_contours(cnts)[0]
+  File "C:\Users\ceyda\PycharmProjects\opencv-zone\venv\lib\site-packages\imutils\contours.py"
+, line 24, in sort_contours
+    (cnts, boundingBoxes) = zip(*sorted(zip(cnts, boundingBoxes),
+ValueError: not enough values to unpack (expected 2, got 0)
 
-print("coins in the image : ", len(cnt))
+ 
