@@ -35,8 +35,8 @@ dilated = cv2.dilate(canny, (1, 1), iterations=0)
 for (i, c) in enumerate(cnts):
     (x, y, w, h) = cv2.boundingRect(c)
     ((cX, cY), radius) = cv2.minEnclosingCircle(c)
-    cv2.circle(image, (int(cX), int(cY)), int(radius),
-                                                                    (0, 0, 255), 3)
+    cv2.circle(image, (int(cX), int(cY)), int(radius), (0, 0, 255), 3)
+    cv2.putText(image, "#{}".format(i + 1), (x, y - 15), cv2.FONT_HERSHEY_SIMPLEX, 0.45, (0, 0, 255), 2)
 (cnt, hierarchy) = cv2.findContours(dilated.copy(), cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_NONE)
 rgb = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
 cv2.drawContours(rgb, cnt, -1, (0, 255, 0), 2)
