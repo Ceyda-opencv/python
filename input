@@ -1,0 +1,13 @@
+from random import randint
+random=randint(-100,100)
+sayac=0
+while True:
+    sayac+=1
+    sayi1=int(input("Tahmin etmek istediğiniz sayıyı giriniz:"))
+    if(sayi1==random):
+        print("Doğru sayıyı tahmin ettiniz tebrikler!!!")
+    elif(sayi1<random):
+        print("Sayınızı yükseltin.")
+    elif(sayi1>random):
+        print("Sayınızı küçültün.")
+
